@@ -4,6 +4,7 @@
   "description": "Vehicle Maintenance Log Web Application",
   "main": "server.js",
   "scripts": {
+    "mysql": "mysql -u root -p",
     "test": "jest",
     "start": "nodemon server.js"
   },
