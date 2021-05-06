@@ -1,0 +1,39 @@
+<!-- this could have options for logged in users to create more cars and maintenance logs-->
+
+
+<section>
+  <h2>Enter A new vehicle </h2>
+
+  <form class="new-vehicle-form">
+    <div>
+      <label for="post-title">Make</label>
+      <input type="text" id="make" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">model</label>
+       <input type="text" id="model" name="post-title" />
+    </div>
+    <div>
+      <label for="post-url">year</label>
+       <input type="text" id="year" name="post-title" />
+    </div>
+
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if vehicle.length}}
+<section>
+  <h2>Your vehicles</h2>
+  <ol>
+    {{#each vehicle as |vehicles|}}
+    <li>
+    {{> vehicle-info vehicles}} 
+      <a href="/dashboard/log/{{vehicle.id}}" class="edit-link">maintenance log</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-vehicle.js" ></script>
