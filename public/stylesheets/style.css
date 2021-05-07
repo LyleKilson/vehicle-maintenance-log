@@ -7,6 +7,7 @@ html {
   background-image: url(../Images/road.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
   padding: 0px;
   margin: 0px;
